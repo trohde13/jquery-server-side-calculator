@@ -1,8 +1,8 @@
-[ ] Set up folders: Public, Styles, Vendors
+[x] Set up folders: Public, Styles, Vendors
 [ ] Set up files: index.html, client.js, server.js, style.css
-[ ] Set up git init, npm init --yes, npm install express
-[ ] Update "scripts" in json: "node server/server.js"
-[ ] Set up server/PORT, check to make sure it's working!
+[x] Set up git init, npm init --yes, npm install express
+[x] Update "scripts" in json: "node server/server.js"
+[x] Set up server/PORT, check to make sure it's working!
 [ ] Bring in jQuery
 
 [ ] Create 2 inputs for numbers
