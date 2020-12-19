@@ -1,11 +1,11 @@
 [x] Set up folders: Public, Styles, Vendors
-[ ] Set up files: index.html, client.js, server.js, style.css
+[x] Set up files: index.html, client.js, server.js, style.css
 [x] Set up git init, npm init --yes, npm install express
 [x] Update "scripts" in json: "node server/server.js"
 [x] Set up server/PORT, check to make sure it's working!
-[ ] Bring in jQuery
+[x] Bring in jQuery
 
-[ ] Create 2 inputs for numbers
+[x] Create 2 inputs for numbers
 [ ] Create buttons for + - * /
 [ ] Create button for = (this will function as submit)
 [ ] Input should be captured as an object and sent to server.js as a POST
