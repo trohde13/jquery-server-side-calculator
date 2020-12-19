@@ -11,8 +11,19 @@ function handleReady() {
 
 }; //end handleReady
 
+//POST
 function handleSubmit() {
     console.log('submit for answer clicked');
+
+
+    $.ajax({
+        url: '/equation'
+        type: 'POST',
+        data: 
+    }).then(function(response){
+        console.log(response);
+        renderToDom();
+    })
 
 }; //end handleSubmit
 
@@ -22,3 +33,16 @@ function handleResetButton() {
     $('.inputIn').val('');
 
 }; //end handleResetButton
+
+// GET
+function renderToDom() {
+    $.ajax({
+        url: '/equation',
+        type: 'GET'
+    }).then(function(response) {
+        console.log(response);
+
+        //appending to DOM, getting rid of zombie dups
+        $('').empty();
+    })
+}
