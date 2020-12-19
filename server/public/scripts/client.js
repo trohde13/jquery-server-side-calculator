@@ -11,7 +11,14 @@ function handleReady() {
 
 }; //end handleReady
 
-function handleSubmit () {
+function handleSubmit() {
     console.log('submit for answer clicked');
 
 }; //end handleSubmit
+
+function handleResetButton() {
+    console.log('clear inputs clicked');
+
+    $('.inputIn').val('');
+
+}; //end handleResetButton
