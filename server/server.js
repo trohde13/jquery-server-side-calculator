@@ -7,31 +7,29 @@ app.use(bodyParser.urlencoded({extended: true}));
 // serves up static files
 app.use(express.static('server/public'));
 
+const mathResults =[];
+
+// variables for math
 let numOne = numOne;
 let numTwo = numTwo;
 let operator = operator;
 let total = 0;
 
+//switch statement to do the math
 switch (operator) {
-    case $('#plus'):
+    case '+':
         total = Number(numOne) + Number(numTwo);
-        handleSubmit(total);
         break;
-    case $('#minus'):
+    case '-':
         total = Number(numOne) - Number(numTwo);
-        handleSubmit(total);
         break;
-    case $('#times'):
-        total = Number(numOne) + Number(numTwo);
-        handleSubmit(total);
+    case '*':
+        total = Number(numOne) * Number(numTwo);
         break;
-    case $('#divide'):
-        total = Number(numOne) + Number(numTwo);
-        handleSubmit(total);
+    case '/':
+        total = Number(numOne) / Number(numTwo);
         break;
 }
-
-const mathResults =
 
 
 //POST ROUTE
