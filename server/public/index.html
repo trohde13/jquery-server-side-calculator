@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="vendors/jquery-3.5.1.js"></script>
     <script src="scripts/client.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <h1>Server Side Calculator</h1>
-    <div>
-        <input type="number" class="inputIn numOne" placeholder="number"/>
-        <button class ="btn" id="plus">+</button>
-        <button class ="btn" id="minus">-</button>
-        <button class ="btn" id="times">*</button>
-        <button class ="btn" id="divide">/</button>
-        <input type="number" class="inputIn numTwo" placeholder="number"/>
-        <button id="submit">=</button>
-        <button id="clear">C</button>
-    </div>
-    <div></div>
+<body class="container">
+    <header class="title">
+        <h1>Server Side Calculator</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <input type="number" class="inputIn numOne" placeholder="number"/>
+            <button class ="btn btn-outline-dark"" id="plus">+</button>
+            <button class ="btn btn-outline-dark"" id="minus">-</button>
+            <button class ="btn btn-outline-dark"" id="times">*</button>
+            <button class ="btn btn-outline-dark"" id="divide">/</button>
+            <input type="number" class="inputIn numTwo" placeholder="number"/>
+            <button id="submit">=</button>
+            <button id="clear">C</button>
+        </div>
+        <div></div>
 
-    <div id="result">
-        <p></p>
-    </div>
+        <div id="result">
+            <p></p>
+        </div>
 
-    <div>
-        <p>PAST RESULTS:</p>
-        <ul class="resultList"></ul>
-    </div>
+        <div>
+            <p class="subTitle">PAST RESULTS:</p>
+            <ul class="resultList"></ul>
+        </div>
+    </main>
 </body>
 </html>
