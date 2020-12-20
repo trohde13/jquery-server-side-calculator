@@ -9,36 +9,45 @@ app.use(express.static('server/public'));
 
 const mathResults =[];
 
-// variables for math
-let numOne = numOne;
-let numTwo = numTwo;
-let operator = operator;
-let total = 0;
 
-//switch statement to do the math
-switch (operator) {
-    case '+':
-        total = Number(numOne) + Number(numTwo);
-        break;
-    case '-':
-        total = Number(numOne) - Number(numTwo);
-        break;
-    case '*':
-        total = Number(numOne) * Number(numTwo);
-        break;
-    case '/':
-        total = Number(numOne) / Number(numTwo);
-        break;
-}
 
 
 //POST ROUTE
 app.post('/equation', (req, res) => {
-    let mathEquation = req.body;
+    // variables for math
+    let numOne = req.body.numOne;
+    let numTwo = req.body.numTwo;
+    let operator = req.body.operator;
+    let total = 0;
+
+    //switch statement to do the math
+    switch (operator) {
+        case '+':
+            total = Number(numOne) + Number(numTwo);
+            break;
+        case '-':
+            total = Number(numOne) - Number(numTwo);
+            break;
+        case '*':
+            total = Number(numOne) * Number(numTwo);
+            break;
+        case '/':
+            total = Number(numOne) / Number(numTwo);
+            break;
+    }
+
+    let mathEquation = {
+        numOne: numOne,
+        numTwo: numTwo,
+        operator: operator,
+        total: total,
+    }
+
+
     console.log(mathEquation);
     res.sendStatus(201);
 
-    
+    return mathResults.push(mathEquation);
 })
 
 
