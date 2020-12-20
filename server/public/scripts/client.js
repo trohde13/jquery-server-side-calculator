@@ -6,20 +6,31 @@ function handleReady() {
     console.log('jquery is loaded');
 
     //click listeners
+    $('.btn').on('click', handleTotal);
     $('#submit').on('click', handleSubmit);
     $('#clear').on('click', handleResetButton);
 
 }; //end handleReady
 
+
+let operator = '';
+
+
+function handleTotal() {
+    console.log('in handleTotal')
+    
+}
+
 //POST
 function handleSubmit() {
     console.log('submit for answer clicked');
 
+    let mathData = handleTotal
 
     $.ajax({
-        url: '/equation'
+        url: '/equation',
         type: 'POST',
-        data: 
+        data: mathData
     }).then(function(response){
         console.log(response);
         renderToDom();
@@ -45,4 +56,4 @@ function renderToDom() {
         //appending to DOM, getting rid of zombie dups
         $('').empty();
     })
-}
+}; //end renderToDom

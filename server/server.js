@@ -7,6 +7,33 @@ app.use(bodyParser.urlencoded({extended: true}));
 // serves up static files
 app.use(express.static('server/public'));
 
+let numOne = numOne;
+let numTwo = numTwo;
+let operator = operator;
+let total = 0;
+
+switch (operator) {
+    case $('#plus'):
+        total = Number(numOne) + Number(numTwo);
+        handleSubmit(total);
+        break;
+    case $('#minus'):
+        total = Number(numOne) - Number(numTwo);
+        handleSubmit(total);
+        break;
+    case $('#times'):
+        total = Number(numOne) + Number(numTwo);
+        handleSubmit(total);
+        break;
+    case $('#divide'):
+        total = Number(numOne) + Number(numTwo);
+        handleSubmit(total);
+        break;
+}
+
+const mathResults =
+
+
 //POST ROUTE
 app.post('/equation', (req, res) => {
     let mathEquation = req.body;
@@ -23,14 +50,7 @@ app.get('/equation', (req,res) => {
     res.send(mathResults);
 })
 
-
-
-
-
-
-
-
-
+//PORT
 app.listen(PORT, () => {
     console.log('Server is rolling on PORT: ', PORT)
 })
