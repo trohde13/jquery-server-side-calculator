@@ -10,7 +10,7 @@ function handleReady() {
     //click listeners
     //selecting operator buttons to do the math by class, using this and .html()
     //to register the specific button clicked
-    $('.operatorButton').on('click', function() {
+    $('.mathOperator').on('click', function() {
         operator = $(this).html();
     });
 
@@ -27,8 +27,8 @@ function handleReady() {
 function handleSubmit() {
     console.log('submit for answer clicked');
 
-    let numOne = $('numOne').val();
-    let numTwo = $('numTwo').val();
+    let numOne = $('.numOne').val();
+    let numTwo = $('.numTwo').val();
     let mathData = {
         numOne: numOne,
         numTwo: numTwo,
@@ -62,6 +62,16 @@ function renderToDom() {
         console.log(response);
 
         //appending to DOM, getting rid of zombie dups
-        $('').empty();
+        $('.resultList').empty();
+
+        for(let object of response) {
+            $('.resultList').append(`
+            <li>
+            ${object.numOne}
+            ${object.operator}
+            ${object.numTwo} = 
+            ${object.total}
+            `)
+        }
     })
 }; //end renderToDom
