@@ -11,23 +11,23 @@
 <body>
     <h1>Server Side Calculator</h1>
     <div>
-        <input type="number" class="inputIn numOne" placeholder="number"/><span>
-        <div class="mathOperator">
-            <button class ="btn" id="plus">+</button>
-            <button class ="btn" id="minus">-</button>
-            <button class ="btn" id="times">*</button>
-            <button class ="btn" id="divide">/</button>
-        </div>
-        </span><input type="number" class="inputIn numTwo" placeholder="number"/>
+        <input type="number" class="inputIn numOne" placeholder="number"/>
+        <button class ="btn" id="plus">+</button>
+        <button class ="btn" id="minus">-</button>
+        <button class ="btn" id="times">*</button>
+        <button class ="btn" id="divide">/</button>
+        <input type="number" class="inputIn numTwo" placeholder="number"/>
         <button id="submit">=</button>
         <button id="clear">C</button>
     </div>
+    <div></div>
 
-    <div>
-        <p class="result"></p>
+    <div id="result">
+        <p></p>
     </div>
 
     <div>
+        <p>PAST RESULTS:</p>
         <ul class="resultList"></ul>
     </div>
 </body>

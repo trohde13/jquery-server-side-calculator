@@ -10,7 +10,7 @@ function handleReady() {
     //click listeners
     //selecting operator buttons to do the math by class, using this and .html()
     //to register the specific button clicked
-    $('.mathOperator').on('click', function() {
+    $('.btn').on('click', function() {
         operator = $(this).html();
     });
 
@@ -27,6 +27,7 @@ function handleReady() {
 function handleSubmit() {
     console.log('submit for answer clicked');
 
+    //identifying the values for the object being sent to the server
     let numOne = $('.numOne').val();
     let numTwo = $('.numTwo').val();
     let mathData = {
@@ -41,20 +42,23 @@ function handleSubmit() {
         data: mathData
     }).then(function(response){
         console.log(response);
+
         renderToDom();
+        
     })
 
 }; //end handleSubmit
 
+//clears inputs
 function handleResetButton() {
     console.log('clear inputs clicked');
 
-      $('.inputIn').val('');
-      $('.result').val('');
+    $('.inputIn').val('');
+    $('#result').val('');
 
 }; //end handleResetButton
 
-// GET
+// GET and append to DOM
 function renderToDom() {
     $.ajax({
         url: '/equation',
@@ -64,9 +68,9 @@ function renderToDom() {
 
         //appending to DOM, getting rid of zombie dups
         $('.resultList').empty();
-        $('.result').empty();
+        $('#result').empty();
 
-        
+        //looping the object returned to append to the results list
         for(let object of response) {
             $('.resultList').append(`
             <li>
@@ -77,8 +81,10 @@ function renderToDom() {
             `)
         }
 
+        
+        //looping the object returned to display the solution to the math
         for(let object of response) {
-            $('.result').append(`${object.total}`);
+            $('#result').text(`${object.total}`);
         }
 
         

@@ -36,6 +36,8 @@ app.post('/equation', (req, res) => {
             break;
     }
 
+    //creating the object that will be appended to the array and 
+    //returned to the user
     let mathEquation = {
         numOne: numOne,
         numTwo: numTwo,
