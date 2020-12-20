@@ -53,7 +53,7 @@ app.post('/equation', (req, res) => {
 
 //GET ROUTE
 app.get('/equation', (req,res) => {
-    console.log('you committed have math');
+    console.log('YOU HAVE COMMITTED MATH!');
     res.send(mathResults);
 })
 

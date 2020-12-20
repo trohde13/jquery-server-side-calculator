@@ -49,7 +49,8 @@ function handleSubmit() {
 function handleResetButton() {
     console.log('clear inputs clicked');
 
-    $('.inputIn').val('');
+      $('.inputIn').val('');
+      $('.result').val('');
 
 }; //end handleResetButton
 
@@ -63,7 +64,9 @@ function renderToDom() {
 
         //appending to DOM, getting rid of zombie dups
         $('.resultList').empty();
+        $('.result').empty();
 
+        
         for(let object of response) {
             $('.resultList').append(`
             <li>
@@ -73,5 +76,11 @@ function renderToDom() {
             ${object.total}
             `)
         }
+
+        for(let object of response) {
+            $('.result').append(`${object.total}`);
+        }
+
+        
     })
 }; //end renderToDom
