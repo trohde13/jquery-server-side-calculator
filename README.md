@@ -43,7 +43,7 @@ How does someone use this application? Tell a user story here.
 
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Thank you Zhu Pod 2 for the project work leading up to this, helping lay the foundation for this project, and to Josh for seeing the detail I needed to finish the project.
+Thanks to [Prime Digital Academy](https://www.primeacademy.io) who equipped and helped me to make this application a reality. Thank you Zhu Pod 2 for the project work leading up to this, helping lay the foundation for this project, and to Josh for seeing the detail I needed to finish the project.
 
 ## Support
-If you have suggestions or issues, please email me at [trohde@rocketmail.com]
+If you have suggestions or issues, please email me at [rohde.t@gmail.com]
