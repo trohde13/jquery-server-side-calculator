@@ -11,7 +11,7 @@ This is a Calculator class project completed during a weekend project sprint tha
 
 ## Screen Shot
 
-![Wireframe](baseMode.png)
+![calculator](images/calculator.png)
 
 
 ### Prerequisites
